@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    var object = {}, properties = ['Единицы', 'Десятки', 'Сотни', 'Тысячи', 'Десятки тысяч', 'Сотни тысяч', 'Миллионы'];
+    var arr = prompt('Введите число до ' + properties.length + ' знаков!').split('').reverse();
+    if (arr.length <= properties.length) {
+        arr.forEach((val, i) => object[properties[i]] = parseInt(val));
+        for (var key in object){
+            !isNaN(object[key]) ? console.log(key + ' : ' + object[key]) : console.log(key + ' : Введены недопустимые символы');
+        }
+        console.log(object);
+    }
+    else {
+        console.log('Слишком длинное число!');
+        console.log(object);
+        }
+</script>
+<body></body>
+</html>
