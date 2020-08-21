@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="objects.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="controllers.js"></script>
+    <title>Millioner</title>
+</head>
+<body>
+    <header>
+        <h2 id="score">Добро пожаловать в игру!</h2>
+    </header>
+    <main>
+        <section class="first">
+            <div class="logo"></div>
+            <ul class="list">
+                <li class="item" id="li1">1</li>
+                <li class="item" id="li2">2</li>
+                <li class="item" id="li3">3</li>
+                <li class="item" id="li4">4</li>
+                <li class="item" id="li5">5</li>
+            </ul>
+        </section>
+
+        <section class="work">
+                <div class="quest">
+                    <p id="ques">Вопрос</p>
+                </div>
+                <div class="answ">
+                    <div id="a1" class="answer">Ответ1</div>
+                    <div id="a2" class="answer">Ответ2</div>
+                    <div id="a3" class="answer">Ответ3</div>
+                    <div id="a4" class="answer">Ответ4</div>
+                </div>
+                <section class="prompter">
+                    <div id="p1" class="prompt"></div>
+                    <div id="p2" class="prompt"></div>
+                    <div id="p3" class="prompt"></div>
+                    <div id="p4" class="prompt"></div>
+                </section>
+        </section>
+    </main>
+
+<!-- Modal -->
+  <div id="modal" class="modal">
+    <div id="content" class="modal_content">
+      <span id="cl" class="close_modal">×</span>
+      <p id='mText'></p>
+        <div id="yn" class="yesNo">
+            <div id="yes">Да</div>
+            <div id="no">Нет</div>
+        </div>
+    </div>
+  </div>
+    
+</body>
+</html>
