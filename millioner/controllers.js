@@ -19,9 +19,8 @@ function wrongClick(element) {
             modal.style.display = 'block';
             }
         }
-        yes.onclick = () => {
-            window.location.reload();  
-        };
+        yes.onclick = () => window.location.reload();  
+
         no.onclick = () => {
             score.innerHTML = 'До скорых встреч!';
             rightClick('Выигрыш: ' + total + ' рублей', '', '', '', '');
@@ -69,9 +68,9 @@ function fillHelp(el1, el2, el3, el4) {
                          + el2.innerHTML + ' - 15%<br><br>'
                          + el3.innerHTML + ' - 10%<br><br>'
                          + el4.innerHTML + ' - 5%';
-    cl.onclick = () => {
-        modal.style.display = 'none';
-    }
+                         
+    cl.onclick = () => modal.style.display = 'none';
+    
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
