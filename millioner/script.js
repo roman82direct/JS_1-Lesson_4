@@ -51,7 +51,6 @@ a1.onclick = function(){
     }, 1000);
     
     // Второй вопрос
-
     if(!countFifty){
     p1.onclick = () => {
         fillFifty(a1, a4);
@@ -83,7 +82,6 @@ a1.onclick = function(){
         }, 1500);
 
         //Третий вопрос
-
         if(!countFifty){
             p1.onclick = () => {
                 fillFifty(a1, a2);
@@ -117,7 +115,6 @@ a1.onclick = function(){
             }, 1000);
 
             //Четвертый вопрос
-            
         if(!countFifty){
             p1.onclick = () => {
                 fillFifty(a2, a3);
@@ -152,7 +149,6 @@ a1.onclick = function(){
                 }, 1500);
 
                 //Пятый вопрос
-                            
                 if(!countFifty){
                     p1.onclick = () => {
                         fillFifty(a2, a3);
@@ -195,12 +191,8 @@ a1.onclick = function(){
                         modal.style.display = "block";
                         yn.style.display = 'flex';
                         mText.innerHTML = '<br><br>Сыграем еще раз?'
-                        yes.onclick = () => {
-                            window.location.reload();  
-                        };
-                        no.onclick = () => {
-                            modal.style.display = "none";
-                        };
+                        yes.onclick = () => window.location.reload();  
+                        no.onclick = () => modal.style.display = "none";
                     }, 3000);
                 }
                     a2.onclick = () => wrongClick(a2);

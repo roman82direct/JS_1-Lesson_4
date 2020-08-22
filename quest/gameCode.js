@@ -90,7 +90,7 @@ function getResult(e){
         alert('Вы не ответили ни на один вопрос');
     } else
         {
-        var e = false;
+        e = false;
         while (!e) {
             var req = +prompt('Всего сделано ходов: ' + answers.length + '\nДля просмотра Ваших ответов введите номер хода или -1 для выхода:');
             if (req >= 1 && req <= answers.length) {
