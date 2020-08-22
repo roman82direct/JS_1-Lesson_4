@@ -5,7 +5,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
 header {
     display: flex;
     justify-content: center;
@@ -52,7 +51,6 @@ main {
     border-radius: 30px;
     padding: 10px 0;
 }
-
 #ques {
     font-size: 1.2em;
     color:darkblue;
@@ -118,7 +116,6 @@ background-color: goldenrod;
     }
 
     /* Modal */
-
     .modal {
         display: none;
         position: fixed;

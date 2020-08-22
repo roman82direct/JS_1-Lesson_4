@@ -6,10 +6,10 @@ function rightClick(question, var1, var2, var3, var4){
     a4.innerHTML = var4;
 }
 
-function wrongClick(element) {
+function wrongClick(element) {//отработка неверного ответа
     setTimeout(() => element.style = 'background-color: darkred', 400);
     setTimeout(function(){
-        total = total >= question3.cost ? question3.cost : 0;
+        total = total >= question3.cost ? question3.cost : 0;//проверка несгораемой суммы
         modal.style.display = "block";
         cl.style.display = 'none';
         yn.style.display = 'flex';
@@ -20,7 +20,6 @@ function wrongClick(element) {
             }
         }
         yes.onclick = () => window.location.reload();  
-
         no.onclick = () => {
             score.innerHTML = 'До скорых встреч!';
             rightClick('Выигрыш: ' + total + ' рублей', '', '', '', '');
@@ -46,11 +45,9 @@ function fillFifty(el1, el2){
 
 function fillCall(el) {
     modal.style.display = 'block';
-    yn.style.display = 'none';
+    yn.style.display = 'none';//выключаем кнопки в модальном окне
     mText.innerHTML = 'Друг считает, что правильный ответ - ' + el.innerHTML;
-    cl.onclick = () => {
-        modal.style.display = 'none';
-    }
+    cl.onclick = () => modal.style.display = 'none';
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -70,7 +67,6 @@ function fillHelp(el1, el2, el3, el4) {
                          + el4.innerHTML + ' - 5%';
                          
     cl.onclick = () => modal.style.display = 'none';
-    
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -80,7 +76,7 @@ function fillHelp(el1, el2, el3, el4) {
     fillPrompt(p2); 
 };
 
-function fillPrompt(element){
+function fillPrompt(element){//выключаем элемент
     element.innerHTML = '';
     element.onclick = null;
     element.style = 'background-color: white; cursor: default';
